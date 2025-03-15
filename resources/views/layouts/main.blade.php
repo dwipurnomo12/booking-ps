@@ -1,3 +1,4 @@
+text/x-generic main.blade.php ( HTML document, ASCII text, with CRLF line terminators )
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +42,11 @@
     <div id="app">
         <div class="main-wrapper container">
             <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <a href="/" class="navbar-brand sidebar-gone-hide">Booking PS</a>
+                <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i
+                        class="fas fa-bars"></i></a>
+            </nav>
             <nav class="navbar navbar-secondary navbar-expand-lg">
                 @include('partials.navbar')
             </nav>

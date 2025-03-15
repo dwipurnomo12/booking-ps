@@ -34,23 +34,26 @@
                             <h4>Hasil Pencarian</h4>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>No HP</th>
-                                        <th>Status</th>
-                                        <th>Category & Sesi</th>
-                                        <th>Tanggal Booking</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="bookingData">
-                                    <tr>
-                                        <td colspan="5" class="text-center">Data tidak ditemukan</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nama</th>
+                                            <th>No HP</th>
+                                            <th>Total Harga</th>
+                                            <th>Status</th>
+                                            <th>Category & Sesi</th>
+                                            <th>Tanggal Booking</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="bookingData">
+                                        <tr>
+                                            <td colspan="5" class="text-center">Data tidak ditemukan</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,8 +84,9 @@
                                         <td>${booking.id}</td>
                                         <td>${booking.name}</td>
                                         <td>${booking.no_hp}</td>
+                                        <td>Rp. ${booking.total_price}</td>
                                         <td><span class="badge badge-${booking.status === 'paid' ? 'success' : 'danger'}">${booking.status}</span></td>
-                                         <td>${booking.category_ps} / ${booking.session} sesi</td>
+                                        <td>${booking.category_ps} / ${booking.session} sesi</td>
                                         <td>${booking.selected_date}</td>
                                     </tr>
                                 `);
